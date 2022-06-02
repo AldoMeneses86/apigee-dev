@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "test",
+            "policies": [
+                
+            ],
+            "proxies": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/ProxyEndpoint/HTTPProxyConnection/BasePath",
+                            "value": "/v1/hello-api"
+                        }
+                    ]
+                }
+            ],
+            "targets": [
+                {
+                    "name": "default.xml",
+                    "tokens": [
+                        {
+                            "xpath": "/TargetEndpoint/HTTPTargetConnection/URL",
+                            "value": "https://mocktarget.apigee.net"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

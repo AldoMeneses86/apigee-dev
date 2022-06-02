@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><APIProxy name="HelloWorld-apigee" revision="1">
+    <Basepaths>/v1/hello-api</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <Description>Apigee mock target service endpoint</Description>
+    <DisplayName>HelloWorld-apigee</DisplayName>
+    <Policies>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec/>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
