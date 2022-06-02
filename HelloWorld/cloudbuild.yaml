@@ -4,4 +4,4 @@ steps:
   args: [ '-c', "gcloud secrets versions access latest --secret=apigee-cicd-pwd --format='get(payload.data)' | tr '_-' '/+' | base64 -d > decrypted-password.txt" ]
 - name: 'gcr.io/cloud-builders/mvn'
   entrypoint: 'bash'
-  args: ['-c', 'mvn install -Peval -Dusername=${_USER_NAME} -Dpassword=$(cat decrypted-password.txt) -Dorg=${_ORG_NAME}']
+  args: ['-c', 'mvn install -Ptest -Dusername=${_USER_NAME} -Dpassword=$(cat decrypted-password.txt) -Dorg=${_ORG_NAME}']
