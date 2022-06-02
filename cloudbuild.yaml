@@ -2,9 +2,6 @@ steps:
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: 'bash'
   args: [ '-c', "gcloud secrets versions access latest --secret=apigee-cicd-pwd --format='get(payload.data)' | tr '_-' '/+' | base64 -d > decrypted-password.txt" ]
-- name: test
+- name: 'gcr.io/cloud-builders/mvn'
   entrypoint: 'bash'
-  args: [ '-c', "cd HelloWorld"]
-#- name: 'gcr.io/cloud-builders/mvn'
-#  entrypoint: 'bash'
-#  args: ['-c', 'mvn install -Ptest -Dusername=${_USER_NAME} -Dpassword=$(cat decrypted-password.txt) -Dorg=${_ORG_NAME} -Denv=eval']
+  args: ['-c', 'mvn install -Ptest -Dusername=${_USER_NAME} -Dpassword=$(cat decrypted-password.txt) -Dorg=${_ORG_NAME} -Denv=eval']
