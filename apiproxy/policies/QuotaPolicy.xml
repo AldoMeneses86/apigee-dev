@@ -2,7 +2,7 @@
 <Quota continueOnError="false" enabled="true" name="QuotaPolicy">
     <DisplayName>QuotaPolicy</DisplayName>
     <Properties/>
-    <Allow count="3"/>
+    <Allow count="4"/>
     <Interval>1</Interval>
     <TimeUnit>minute</TimeUnit>
 </Quota>
