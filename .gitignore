@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### SA
+sa-apigee-deployer.json
+apigee-svc-eval-01-8f2c2e3037ae.json
+
+#MAC
+*.DS_Store
